@@ -1,0 +1,87 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4{
+    text-align: center;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#film-section{
+    width: 100%;
+    max-width: 1000px;
+    border: 2px solid gray;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+ul {
+
+    padding-left:0;
+}
+
+ul li{
+    list-style: none;
+    cursor: pointer;
+
+}
+
+
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.film-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.modal {
+    display: none; /* Gör modalen osynlig som standard */
+    position: fixed; /* Positionera modalen relativt till webbläsarfönstret */
+    top: 50%; /* Centrera vertikalt */
+    left: 50%; /* Centrera horisontellt */
+    transform: translate(-50%, -50%); /* Justera positionen till mitten */
+    width: 80%; /* Ställ in bredden på modalen */
+    max-width: 80%; /* Sätt ett maxvärde för bredden */
+    height: 80%;
+    padding: 20px; /* Lägg till utfyllnad för innehållet */
+    background-color: white; /* Ställ in bakgrundsfärgen */
+    border-radius: 8px; /* Runda hörnen */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lägg till en skugga */
+}
+
+/* Stil för bakgrundsskiktet */
+.modal-background {
+    position: fixed; /* Positionera det bakre skiktet relativt till webbläsarfönstret */
+    top: 0; /* Placera skiktet längst upp */
+    left: 0; /* Placera skiktet längst till vänster */
+    width: 100%; /* Ställ in bredden på skiktet */
+    height: 100%; /* Ställ in höjden på skiktet */
+    background-color: rgba(0, 0, 0, 0.5); /* Ställ in en halvgenomskinlig svart bakgrund */
+    z-index: 1000; /* Sätt ett högt z-index för att placera det över allt annat */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

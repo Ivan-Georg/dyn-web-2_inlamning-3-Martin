@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RateAFilm</title>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Rate a Film</h1>
+
+            <nav>
+                <button id="logout-button">Logout</button>
+                <button id="register-button">Register</button>
+            </nav>
+        </header>
+
+        <section id="register-section" style="display: none">
+            <h2>Register</h2>
+            <form action="">
+                <label for="register-email">Email: </label>
+                <input type="email" name="register-email" id="register-email" /> <br />
+
+                <label for="register-password">Password:</label>
+                <input type="password" name="register-password" id="register-password" /> <br />
+
+                <button id="add-new-member-button">Register</button>
+            </form>
+        </section>
+        <section id="login-section" style="display: none">
+            <h2>Login</h2>
+
+            <label for="login-email">Email: </label>
+            <input type="email" name="login-email" id="login-email" value="string@string.com" />
+            <br />
+
+            <label for="login-password">Password:</label>
+            <input type="password" name="login-password" id="login-password" value="string" />
+            <br />
+
+            <button id="login-button">Login</button>
+        </section>
+
+        <section id="film-section" style="display: none">
+            <p id="modal-film-id" style="display: none"></p>
+            <section id="film-modal" class="modal" style="display: none">
+                <span class="close-button">&times;</span>
+                <p id="modal-film-id" style="display: none"></p>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <button id="edit-film-button" type="button" class="btn btn-primary">
+                    edit Film
+                </button>
+                <div id="update-film-div">
+                    <button id="delete-film-button" type="button">Delete film</button>
+                    <form id="update-film-form" style="display: none" action="">
+                        <button id="close-film-edit-form-button">Close</button>
+                        <label for="film-title">Title: </label>
+                        <input type="text" name="film-title" id="film-title-modal" />
+                        <label for="film-releaseYear">Release year: </label>
+                        <input type="text" name="film-releaseYear" id="film-releaseYear-modal" />
+                        <label for="film-genre">Genre: </label>
+                        <input type="text" name="film-genre" id="film-genre-modal" />
+                        <button id="update-film-button" type="button" class="btn btn-primary">
+                            Update Film
+                        </button>
+                    </form>
+                </div>
+                <div id="reviewsec" style="display: block" class="modal-footer">
+                    <h3>Reviews:</h3>
+                    <ul id="modal-review-list"></ul>
+
+                    <!-- Modal Footer -->
+
+                    <button id="create-review-button">Add a review</button>
+                    <form id="add-review-form" style="display: none" action="">
+                        <button id="close-review-form-button">Close</button>
+                        <label for="review-comment">Comment: </label>
+                        <input type="text" name="review-comment" id="review-comment" />
+                        <hr />
+                        <label for="review-rating">Rating: </label>
+                        <input type="text" name="review-rating" id="review-rating" />
+
+                        <button id="add-review-button" style="display: block">Send review</button>
+                    </form>
+                </div>
+            </section>
+
+            <div class="film-grid" id="film-grid"></div>
+            <button id="create-film-button" style="display: block">Add a film</button>
+            <section id="add-film-section" style="display: none">
+                <button id="close-film-button">Close</button>
+                <form action="">
+                    <label for="film-title">Title: </label>
+                    <input type="text" name="film-title" id="film-title" />
+                    <hr />
+                    <label for="film-relaseYear">Release year: </label>
+                    <input type="text" name="film-releaseYear" id="film-releaseYear" />
+                    <hr />
+                    <label for="film-genre">Genre: </label>
+                    <input type="text" name="film-genre" id="film-genre" />
+                </form>
+                <button id="add-film-button">Add</button>
+            </section>
+        </section>
+
+        <hr />
+
+        <script src="script.js"></script>
+    </body>
+</html>
